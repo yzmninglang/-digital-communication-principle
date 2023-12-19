@@ -47,6 +47,7 @@ public:
 	CTabCtrl r_tab1;
 	afx_msg void OnStnClickedT();
 	afx_msg void OnStnClickedF();
+	//绘制信号和Freq的函数
 	void Draw_graph(float S[], float Fre[]);
 	void Draw_graph_filter(float S[], float Fre[]);
 	float findmax(float x[], int m);

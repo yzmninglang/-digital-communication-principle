@@ -20,6 +20,20 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
+	int my_ID;
+	int nFs;
+	//	int nFc;
+	float snr;
+	float nLpfc;
+	float nBpfc1;
+	float nBpfc2;
+	float nBpfc3;
+	float nBpfc4;
+	int Fc1;
+	int Fc2;
+	CString nDesign;
+	CComboBox my_Winfunc;
+	//CFSKDlg* Getparent();
 //	afx_msg void OnBnClickedButton3();
 	afx_msg void OnBnClickedButtonBase();
 	afx_msg void OnBnClickedButtonConvert();
@@ -42,4 +56,10 @@ public:
 	afx_msg void OnBnClickedButtonAsk();
 	afx_msg void OnBnClickedButtonAdjustAsk();
 	afx_msg void OnCbnSelchangeCombo2();
+	afx_msg void OnBnClickedButtonBase2();
+	afx_msg void OnBnClickedButton8();
+	afx_msg void OnBnClickedButtonBpf2();
+//	CButton MXBH;
+	afx_msg void OnBnClickedButtonP();
+	afx_msg void OnBnClickedButtonLpf();
 };

@@ -15,7 +15,7 @@ static char THIS_FILE[] = __FILE__;
 SigTranmit::SigTranmit()
 {
 	myID = 1111;
-	myIntensity = 1;
+	myIntensity = 20;
 	fs = 8000.0;
 	fc1 = 1000.0;
 	fc2 = 2000.0;
@@ -74,13 +74,13 @@ void SigTranmit::Basesignal(int myID)
 
 }
 
-//第二路信号为第一路互补
+//改为双极性信号
 void SigTranmit::Convert(void)
 {
 	for (int i = 0; i < 16 * M; i++)
 	{
-		if (Sa[i] > 0)Sa2[i] = 0;
-		else Sa2[i] = 1;
+		if (Sa[i] > 0)Sa[i] = 1;
+		else Sa[i] = -1;
 	}
 }
 
@@ -204,7 +204,7 @@ void SigTranmit::Lpf_win()
 }
 
 
-void SigTranmit::Conv(float array1[], float array2[], float *Sa)
+void SigTranmit::Conv(float array1[], float array2[], float *Sa)  
 {
 	int i, j, length = 16 * M + N;
 	float b1[16 * M + N];
@@ -268,7 +268,7 @@ void SigTranmit::PSK(int flag)
 	}
 }
 
-//float inten
+//float int
 void SigTranmit::Noise(double Sq)
 {
 	//awgn(inten, 16 * M, No);

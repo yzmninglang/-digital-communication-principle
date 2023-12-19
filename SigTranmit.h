@@ -82,7 +82,7 @@ public:
 	void ASKSigRecover(void);
 	void Dft(float x[], int m);
 	void Idft(float hR[], float hI[]);
-	void Conv(float array1[], float array2[], float* Sa);
+	void Conv(float array1[], float array2[], float* Sa);//卷积为array1和array2，sa用来存放卷积之后的结果
 	void Convert(void);
 	void ASK(int flag);
 	void FSK(int flag);

@@ -25,9 +25,11 @@
 #define IDC_myID                        1004
 #define IDC_BUTTON6                     1005
 #define IDC_BUTTON_2FSK                 1005
+#define IDC_BUTTON_P                    1005
 #define IDC_F                           1006
 #define IDC_BUTTON7                     1006
 #define IDC_BUTTON_Convert              1006
+#define IDC_myID2                       1006
 #define IDC_EDIT4                       1007
 #define IDC_BUTTON8                     1007
 #define IDC_Fs                          1007
@@ -58,12 +60,16 @@
 #define IDC_BUTTON14                    1014
 #define IDC_BPF3                        1014
 #define IDC_BUTTON_Fc2_bpf              1014
+#define IDC_Fc3                         1014
+#define IDC_LPF_2                       1014
 #define IDC_TAB1                        1015
 #define IDC_BUTTON15                    1015
 #define IDC_BPF4                        1015
 #define IDC_BUTTON_DemodulateF2         1015
 #define IDC_BUTTON16                    1016
 #define IDC_BUTTON_Lpf2                 1016
+#define IDC_BPF5                        1016
+#define IDC_BPF_2                       1016
 #define IDC_BUTTON_LPF                  1020
 #define IDC_BUTTON_BPF                  1021
 #define IDC_BUTTON_BPF1                 1021
@@ -77,14 +83,15 @@
 #define IDC_BUTTON_ASK                  1032
 #define IDC_BUTTON_Adjust_ASK           1033
 #define IDC_COMBOBOXEX1                 1035
+#define IDC_BPF_1                       1037
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        134
+#define _APS_NEXT_RESOURCE_VALUE        135
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1036
+#define _APS_NEXT_CONTROL_VALUE         1038
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

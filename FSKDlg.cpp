@@ -218,8 +218,11 @@ float CFSKDlg::findmax(float x[], int m)
 	return t;
 }
 
+
+
 void CFSKDlg::Draw_graph(float S[], float Fre[])
 {
+	////画信号S和频率Freq
 	CWnd* pWnd = GetDlgItem(IDC_T);
 	CDC* pDC = pWnd->GetDC();
 	CRect rect;
@@ -239,9 +242,11 @@ void CFSKDlg::Draw_graph(float S[], float Fre[])
 	int ox = int((W - (16 * M) * StepX) / 2);
 	int oyt = rect.bottom - int(H / 2);
 	//画坐标
-	CPen CoordinatePen, pen;
+	CPen CoordinatePen, pen,indexPen;
 	CoordinatePen.CreatePen(PS_SOLID, 1, RGB(0, 255, 0));
 	pen.CreatePen(PS_SOLID, 1, RGB(0, 0, 255));
+	indexPen.CreatePen(PS_DOT, 1, RGB(255, 0, 0));
+	
 	pDC->SelectObject(&CoordinatePen);
 	pDC->MoveTo(rect.left, oyt);
 	pDC->LineTo(rect.left + W, oyt);
@@ -249,23 +254,35 @@ void CFSKDlg::Draw_graph(float S[], float Fre[])
 	CPen pen2;
 	pen2.CreatePen(PS_DOT, 1, RGB(150, 150, 150));
 	pDC->SelectObject(&pen2);
-	for (int i1 = 0; i1 < H; i1 += 20)
-	{
-		pDC->MoveTo(0, i1);
-		pDC->LineTo(W, i1);
+	//for (int i1 = 0; i1 < H; i1 += 20)
+	//{
+	//	pDC->MoveTo(0, i1);
+	//	pDC->LineTo(W, i1);
 
-	}
-	for (int j1 = 0; j1 < W; j1 += 20)
-	{
+	//}
+	//for (int j1 = 0; j1 < W; j1 += 20)
+	//{
 
-		pDC->MoveTo(j1, 0);
-		pDC->LineTo(j1, H);
-	}
+	//	pDC->MoveTo(j1, 0);
+	//	pDC->LineTo(j1, H);
+	//}
 	pDC->SelectObject(&pen);
 	pDC->MoveTo(ox, oyt);
+	int m = 0;
 	for (int i = 0; i < (16 * M); i++)
 	{
+		if (i % (4 * M) == 0 && i!=0)
+		{
+			pDC->SelectObject(&indexPen);
+			pDC->MoveTo(ox+(i-1)* StepX, oyt - 130);
+			pDC->LineTo(ox+ (i-1)* StepX, oyt + 100);
+			pDC->MoveTo(ox+ (i-1)* StepX, oyt- StepY * S[i-1]);
+			pDC->SelectObject(&pen);
+		}
+
 		pDC->LineTo(ox + i * StepX, int(oyt - StepY * S[i]));
+		
+		
 	}
 	//频谱图
 	CWnd* pWnd1 = GetDlgItem(IDC_F);
@@ -299,18 +316,18 @@ void CFSKDlg::Draw_graph(float S[], float Fre[])
 	CPen pen4;
 	pen4.CreatePen(PS_DOT, 1, RGB(150, 150, 150));
 	pDC1->SelectObject(&pen4);
-	for (int i2 = 0; i2 < H1; i2 += 20)
-	{
-		pDC1->MoveTo(0, i2);
-		pDC1->LineTo(W, i2);
+	//for (int i2 = 0; i2 < H1; i2 += 20)
+	//{
+	//	pDC1->MoveTo(0, i2);
+	//	pDC1->LineTo(W, i2);
 
-	}
-	for (int j2 = 0; j2 < W1; j2 += 20)
-	{
+	//}
+	//for (int j2 = 0; j2 < W1; j2 += 20)
+	//{
 
-		pDC1->MoveTo(j2, 0);
-		pDC1->LineTo(j2, H);
-	}
+	//	pDC1->MoveTo(j2, 0);
+	//	pDC1->LineTo(j2, H);
+	//}
 
 	pDC1->SelectObject(&pen1);
 	pDC1->MoveTo(oxf, oyf);
@@ -353,18 +370,18 @@ void CFSKDlg::Draw_graph_filter(float S[], float Fre[])
 	CPen pen2;
 	pen2.CreatePen(PS_DOT, 1, RGB(150, 150, 150));
 	pDC->SelectObject(&pen2);
-	for (int i1 = 0; i1 < H; i1 += 20)
-	{
-		pDC->MoveTo(0, i1);
-		pDC->LineTo(W, i1);
+	//for (int i1 = 0; i1 < H; i1 += 20)
+	//{
+	//	pDC->MoveTo(0, i1);
+	//	pDC->LineTo(W, i1);
 
-	}
-	for (int j1 = 0; j1 < W; j1 += 20)
-	{
+	//}
+	//for (int j1 = 0; j1 < W; j1 += 20)
+	//{
 
-		pDC->MoveTo(j1, 0);
-		pDC->LineTo(j1, H);
-	}
+	//	pDC->MoveTo(j1, 0);
+	//	pDC->LineTo(j1, H);
+	//}
 	pDC->SelectObject(&pen);
 	pDC->MoveTo(ox, oyt);
 	for (int i = 0; i < N; i++)
