@@ -69,4 +69,8 @@ public:
 	afx_msg void OnBnClickedMfcbutton4();
 	afx_msg void OnBnClickedMfcbutton5();
 	afx_msg void OnBnClickedButtonLpfshow();
+	afx_msg void OnBnClickedButton1();
+	afx_msg void OnEnChangemyid2();
+	afx_msg void OnEnChangeEdit1();
+	afx_msg void OnEnChangemyid1();
 };

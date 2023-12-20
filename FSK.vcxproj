@@ -214,6 +214,7 @@
     <ResourceCompile Include="FSK.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resource.hm" />
     <None Include="res\FSK.rc2" />
   </ItemGroup>
   <ItemGroup>

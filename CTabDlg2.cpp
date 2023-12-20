@@ -92,7 +92,11 @@ ON_BN_CLICKED(IDC_BUTTON_LPF, &CTabDlg2::OnBnClickedButtonLpf)
 ON_BN_CLICKED(IDC_MFCBUTTON3, &CTabDlg2::OnBnClickedMfcbutton3)
 ON_BN_CLICKED(IDC_MFCBUTTON4, &CTabDlg2::OnBnClickedMfcbutton4)
 //ON_BN_CLICKED(IDC_MFCBUTTON5, &CTabDlg2::OnBnClickedMfcbutton5)
-ON_BN_CLICKED(IDC_BUTTON_LPFSHOW, &CTabDlg2::OnBnClickedButtonLpfshow)
+//ON_BN_CLICKED(IDC_BUTTON_LPFSHOW, &CTabDlg2::OnBnClickedButtonLpfshow)
+ON_BN_CLICKED(IDC_BUTTON1, &CTabDlg2::OnBnClickedButton1)
+ON_EN_CHANGE(IDC_myID2, &CTabDlg2::OnEnChangemyid2)
+//ON_EN_CHANGE(IDC_EDIT1, &CTabDlg2::OnEnChangeEdit1)
+ON_EN_CHANGE(IDC_myID1, &CTabDlg2::OnEnChangemyid1)
 END_MESSAGE_MAP()
 
 
@@ -440,11 +444,60 @@ void CTabDlg2::OnBnClickedMfcbutton4()
 
 
 
-void CTabDlg2::OnBnClickedButtonLpfshow()
+//void CTabDlg2::OnBnClickedButtonLpfshow()
+//{
+//	// TODO: 在此添加控件通知处理程序代码
+//	Signal.Lpf();
+//	Signal.Dft(Signal.GetHl(), N);
+//	CFSKDlg* parent = (CFSKDlg*)GetParent()->GetParent();//CSensorSysDlg是主对话框对应的类
+//	parent->Draw_graph_filter(Signal.GetHl(), Signal.GetA());
+//}
+
+
+void CTabDlg2::OnBnClickedButton1()
+// TODO: 在此添加控件通知处理程序代码
 {
-	// TODO: 在此添加控件通知处理程序代码
-	Signal.Lpf();
-	Signal.Dft(Signal.GetHl(), N);
+	Signal.Bpf(1);
+	Signal.Dft(Signal.GetH2(), N);
 	CFSKDlg* parent = (CFSKDlg*)GetParent()->GetParent();//CSensorSysDlg是主对话框对应的类
-	parent->Draw_graph_filter(Signal.GetHl(), Signal.GetA());
+	parent->Draw_graph_filter(Signal.GetH2(), Signal.GetA());
+}
+
+
+void CTabDlg2::OnEnChangemyid2()
+{
+	UpdateData(TRUE);
+	Signal.SetID(my_ID);
+	// TODO:  如果该控件是 RICHEDIT 控件，它将不
+	// 发送此通知，除非重写 CDialogEx::OnInitDialog()
+	// 函数并调用 CRichEditCtrl().SetEventMask()，
+	// 同时将 ENM_CHANGE 标志“或”运算到掩码中。
+
+	// TODO:  在此添加控件通知处理程序代码
+}
+
+
+void CTabDlg2::OnEnChangeEdit1()
+{
+	//UpdateData(TRUE);
+	//Signal.SetID(my_ID);
+	// TODO:  如果该控件是 RICHEDIT 控件，它将不
+	// 发送此通知，除非重写 CDialogEx::OnInitDialog()
+	// 函数并调用 CRichEditCtrl().SetEventMask()，
+	// 同时将 ENM_CHANGE 标志“或”运算到掩码中。
+
+	// TODO:  在此添加控件通知处理程序代码
+}
+
+
+void CTabDlg2::OnEnChangemyid1()
+{
+	UpdateData(TRUE);
+	Signal.SetID(my_ID);
+	// TODO:  如果该控件是 RICHEDIT 控件，它将不
+	// 发送此通知，除非重写 CDialogEx::OnInitDialog()
+	// 函数并调用 CRichEditCtrl().SetEventMask()，
+	// 同时将 ENM_CHANGE 标志“或”运算到掩码中。
+
+	// TODO:  在此添加控件通知处理程序代码
 }

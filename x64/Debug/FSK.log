@@ -5,16 +5,28 @@ E:\study\Production practice of digital communication principle\last\CTabDlg2.cp
 E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(28,7): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
-E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(152,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(156,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
-E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(162,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(166,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
-E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(224,33): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(228,33): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
-E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(234,33): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(238,33): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
+  FSK.cpp
+  SigTranmit.cpp
+E:\study\Production practice of digital communication principle\last\SigTranmit.cpp(277,23): warning C4305: “初始化”: 从“double”到“float”截断
+  (编译源文件“/SigTranmit.cpp”)
+  
+E:\study\Production practice of digital communication principle\last\SigTranmit.cpp(282,26): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  (编译源文件“/SigTranmit.cpp”)
+  
+E:\study\Production practice of digital communication principle\last\SigTranmit.cpp(697,9): warning C4244: “return”: 从“float”转换到“int”，可能丢失数据
+  (编译源文件“/SigTranmit.cpp”)
+  
+  正在生成代码...
   FSK.vcxproj -> E:\study\Production practice of digital communication principle\last\x64\Debug\FSK.exe
