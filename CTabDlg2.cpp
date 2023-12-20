@@ -86,6 +86,13 @@ ON_BN_CLICKED(IDC_BUTTON8, &CTabDlg2::OnBnClickedButton8)
 ON_BN_CLICKED(IDC_BUTTON_BPF2, &CTabDlg2::OnBnClickedButtonBpf2)
 ON_BN_CLICKED(IDC_BUTTON_P, &CTabDlg2::OnBnClickedButtonP)
 ON_BN_CLICKED(IDC_BUTTON_LPF, &CTabDlg2::OnBnClickedButtonLpf)
+//ON_BN_CLICKED(IDC_MFCBUTTON1, &CTabDlg2::OnBnClickedMfcbutton1)
+//ON_BN_CLICKED(IDC_BUTTON6, &CTabDlg2::OnBnClickedButton6)
+//ON_BN_CLICKED(IDC_MFCBUTTON_LPF, &CTabDlg2::OnBnClickedMfcbuttonLpf)
+ON_BN_CLICKED(IDC_MFCBUTTON3, &CTabDlg2::OnBnClickedMfcbutton3)
+ON_BN_CLICKED(IDC_MFCBUTTON4, &CTabDlg2::OnBnClickedMfcbutton4)
+//ON_BN_CLICKED(IDC_MFCBUTTON5, &CTabDlg2::OnBnClickedMfcbutton5)
+ON_BN_CLICKED(IDC_BUTTON_LPFSHOW, &CTabDlg2::OnBnClickedButtonLpfshow)
 END_MESSAGE_MAP()
 
 
@@ -362,6 +369,82 @@ void CTabDlg2::OnBnClickedButtonLpf()
 	// TODO: 在此添加控件通知处理程序代码
 	Signal.Lpf();
 	Signal.Dft(Signal.GetHl(), N);
-	//CSensorSysDlg是主对话框对应的类
-	//CTabDlg2::
+	CFSKDlg* parent = (CFSKDlg*)GetParent()->GetParent();//CSensorSysDlg是主对话框对应的类
+	parent->Draw_graph_filter(Signal.GetHl(), Signal.GetA());
+}
+
+
+void CTabDlg2::OnBnClickedMfcbutton1()
+{
+	// TODO: 在此添加控件通知处理程序代码
+}
+
+
+void CTabDlg2::OnBnClickedButton6()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	// TODO: 在此添加控件通知处理程序代码
+	CFSKDlg* parent = (CFSKDlg*)GetParent()->GetParent();//CSensorSysDlg是主对话框对应的类
+	Signal.Convert();
+	Signal.Dft(Signal.GetSa(), 16 * M);
+	//printf("hello");
+	//cout << "sa";
+	parent->Draw_graph(Signal.GetSa(), Signal.GetA());
+
+}
+
+
+void CTabDlg2::OnBnClickedMfcbuttonLpf()
+{
+	// TODO: 在此添加控件通知处理程序代码
+// TODO: 在此添加控件通知处理程序代码
+	CFSKDlg* parent = (CFSKDlg*)GetParent()->GetParent();//CSensorSysDlg是主对话框对应的类
+	Signal.Convert();
+	Signal.Dft(Signal.GetSa(), 16 * M);
+	//printf("hello");
+	//cout << "sa";
+	parent->Draw_graph(Signal.GetSa(), Signal.GetA());
+	// TODO: 在此添加控件通知处理程序代码
+}
+
+
+void CTabDlg2::OnBnClickedMfcbutton3()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	// TODO: 在此添加控件通知处理程序代码
+	//CFSKDlg* parent = (CFSKDlg*)GetParent()->GetParent();//CSensorSysDlg是主对话框对应的类
+	//Signal.Convert();
+	//Signal.Dft(Signal.GetSa(), 16 * M);
+	////printf("hello");
+	////cout << "sa";
+	//parent->Draw_graph(Signal.GetSa(), Signal.GetA());
+
+
+
+	Signal.Lpf();
+	Signal.Dft(Signal.GetHl(), N);
+	CFSKDlg* parent = (CFSKDlg*)GetParent()->GetParent();//CSensorSysDlg是主对话框对应的类
+	parent->Draw_graph_filter(Signal.GetHl(), Signal.GetA());
+}
+
+
+void CTabDlg2::OnBnClickedMfcbutton4()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	Signal.Bpf(1);
+	Signal.Dft(Signal.GetHl(), N);
+	CFSKDlg* parent = (CFSKDlg*)GetParent()->GetParent();//CSensorSysDlg是主对话框对应的类
+	parent->Draw_graph_filter(Signal.GetHl(), Signal.GetA());
+}
+
+
+
+
+void CTabDlg2::OnBnClickedButtonLpfshow()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	Signal.Lpf();
+	Signal.Dft(Signal.GetHl(), N);
+	CFSKDlg* parent = (CFSKDlg*)GetParent()->GetParent();//CSensorSysDlg是主对话框对应的类
+	parent->Draw_graph_filter(Signal.GetHl(), Signal.GetA());
 }

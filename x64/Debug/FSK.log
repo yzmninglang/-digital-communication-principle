@@ -1,42 +1,20 @@
-﻿  CTabDlg1.cpp
-E:\study\Production practice of digital communication principle\last\CTabDlg1.cpp(28,7): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-  (编译源文件“/CTabDlg1.cpp”)
-  
-E:\study\Production practice of digital communication principle\last\CTabDlg1.cpp(29,7): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-  (编译源文件“/CTabDlg1.cpp”)
-  
-E:\study\Production practice of digital communication principle\last\CTabDlg1.cpp(103,15): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“/CTabDlg1.cpp”)
-  
-E:\study\Production practice of digital communication principle\last\CTabDlg1.cpp(138,16): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“/CTabDlg1.cpp”)
-  
-E:\study\Production practice of digital communication principle\last\CTabDlg1.cpp(150,16): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“/CTabDlg1.cpp”)
-  
-  CTabDlg2.cpp
+﻿  CTabDlg2.cpp
 E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(27,7): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
 E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(28,7): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
-E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(145,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(152,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
-E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(155,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(162,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
-E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(217,33): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(224,33): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
-E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(227,33): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+E:\study\Production practice of digital communication principle\last\CTabDlg2.cpp(234,33): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
   (编译源文件“/CTabDlg2.cpp”)
   
-  FSK.cpp
-  FSKDlg.cpp
-E:\study\Production practice of digital communication principle\last\FSKDlg.cpp(279,37): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-  (编译源文件“/FSKDlg.cpp”)
-  
-  正在生成代码...
   FSK.vcxproj -> E:\study\Production practice of digital communication principle\last\x64\Debug\FSK.exe

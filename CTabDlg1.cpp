@@ -77,6 +77,7 @@ BEGIN_MESSAGE_MAP(CTabDlg1, CDialogEx)
 	ON_EN_CHANGE(IDC_myID, &CTabDlg1::OnEnChangemyid)
 	ON_CBN_SELCHANGE(IDC_Design, &CTabDlg1::OnCbnSelchangeDesign)
 	ON_CBN_SELCHANGE(IDC_WinFunc, &CTabDlg1::OnCbnSelchangeWinfunc)
+	//ON_BN_CLICKED(IDC_MFCBUTTON1LPF, &CTabDlg1::OnBnClickedMfcbutton1lpf)
 END_MESSAGE_MAP()
 
 
@@ -274,4 +275,11 @@ void CTabDlg1::OnCbnSelchangeWinfunc()
 	case 2:Signal.SetWin(WIN_HMC); break;//HMC
 	case 3:Signal.SetWin(WIN_BLKMC); break;//BLKMC
 	}
+}
+
+
+void CTabDlg1::OnBnClickedMfcbutton1lpf()
+{
+	// TODO: 在此添加控件通知处理程序代码
+
 }

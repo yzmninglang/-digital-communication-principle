@@ -26,6 +26,7 @@
 #define IDC_BUTTON6                     1005
 #define IDC_BUTTON_2FSK                 1005
 #define IDC_BUTTON_P                    1005
+#define IDC_BUTTON_LPFSHOW              1005
 #define IDC_F                           1006
 #define IDC_BUTTON7                     1006
 #define IDC_BUTTON_Convert              1006
@@ -84,6 +85,9 @@
 #define IDC_BUTTON_Adjust_ASK           1033
 #define IDC_COMBOBOXEX1                 1035
 #define IDC_BPF_1                       1037
+#define IDC_MFCBUTTON3                  1043
+#define IDC_MFCBUTTON4                  1044
+#define IDC_SCROLLBAR1                  1047
 
 // Next default values for new objects
 // 
@@ -91,7 +95,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        135
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1038
+#define _APS_NEXT_CONTROL_VALUE         1048
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

@@ -62,4 +62,11 @@ public:
 //	CButton MXBH;
 	afx_msg void OnBnClickedButtonP();
 	afx_msg void OnBnClickedButtonLpf();
+	afx_msg void OnBnClickedMfcbutton1();
+	afx_msg void OnBnClickedButton6();
+	afx_msg void OnBnClickedMfcbuttonLpf();
+	afx_msg void OnBnClickedMfcbutton3();
+	afx_msg void OnBnClickedMfcbutton4();
+	afx_msg void OnBnClickedMfcbutton5();
+	afx_msg void OnBnClickedButtonLpfshow();
 };

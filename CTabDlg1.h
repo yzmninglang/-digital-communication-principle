@@ -53,4 +53,5 @@ public:
 	CComboBox my_Winfunc;
 	afx_msg void OnCbnSelchangeDesign();
 	afx_msg void OnCbnSelchangeWinfunc();
+	afx_msg void OnBnClickedMfcbutton1lpf();
 };
