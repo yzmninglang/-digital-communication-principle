@@ -78,8 +78,8 @@ END_MESSAGE_MAP()
 BOOL CFSKDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
-	r_tab1.InsertItem(0, _T("参数设置")); //修改分页名称	
-	r_tab1.InsertItem(1, _T("数字通信系统模拟仿真"));
+	r_tab1.InsertItem(0, _T("数字通信系统模拟仿真")); //修改分页名称	
+	//r_tab1.InsertItem(1, _T("数字通信系统模拟仿真"));
 	//******将子窗口嵌到主窗口中，并且修改下大小******//
 	CTabDlg1.Create(IDD_DIALOG1, &r_tab1);
 	CTabDlg2.Create(IDD_DIALOG2, &r_tab1);
@@ -90,15 +90,15 @@ BOOL CFSKDlg::OnInitDialog()
 	rc.bottom -= 0;
 	rc.left += 0;
 	rc.right -= 0;
-	CTabDlg1.MoveWindow(&rc);
+	//CTabDlg1.MoveWindow(&rc);
 	CTabDlg2.MoveWindow(&rc);
 
 	//把对话框对象指针保存起来
 	pDialog[0] = &CTabDlg1;
 	pDialog[1] = &CTabDlg2;
 	//显示初始页面
-	pDialog[0]->ShowWindow(SW_SHOW);
-	pDialog[1]->ShowWindow(SW_HIDE);
+	pDialog[0]->ShowWindow(SW_HIDE);
+	pDialog[1]->ShowWindow(SW_SHOW);
 	//保存当前选择
 	m_CurSelTab = 0;
 
