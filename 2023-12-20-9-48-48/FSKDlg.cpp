@@ -69,7 +69,6 @@ BEGIN_MESSAGE_MAP(CFSKDlg, CDialogEx)
 	ON_NOTIFY(TCN_SELCHANGE, IDC_TAB1, &CFSKDlg::OnTcnSelchangeTab1)
 	ON_STN_CLICKED(IDC_T, &CFSKDlg::OnStnClickedT)
 	ON_STN_CLICKED(IDC_F, &CFSKDlg::OnStnClickedF)
-	ON_BN_CLICKED(IDC_BUTTON_LPFSHOW, &CFSKDlg::OnBnClickedButtonLpfshow)
 END_MESSAGE_MAP()
 
 
@@ -78,8 +77,8 @@ END_MESSAGE_MAP()
 BOOL CFSKDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
-	r_tab1.InsertItem(0, _T("数字通信系统模拟仿真")); //修改分页名称	
-	//r_tab1.InsertItem(1, _T("数字通信系统模拟仿真"));
+	r_tab1.InsertItem(0, _T("参数设置")); //修改分页名称	
+	r_tab1.InsertItem(1, _T("数字通信系统模拟仿真"));
 	//******将子窗口嵌到主窗口中，并且修改下大小******//
 	CTabDlg1.Create(IDD_DIALOG1, &r_tab1);
 	CTabDlg2.Create(IDD_DIALOG2, &r_tab1);
@@ -90,15 +89,15 @@ BOOL CFSKDlg::OnInitDialog()
 	rc.bottom -= 0;
 	rc.left += 0;
 	rc.right -= 0;
-	//CTabDlg1.MoveWindow(&rc);
+	CTabDlg1.MoveWindow(&rc);
 	CTabDlg2.MoveWindow(&rc);
 
 	//把对话框对象指针保存起来
 	pDialog[0] = &CTabDlg1;
 	pDialog[1] = &CTabDlg2;
 	//显示初始页面
-	pDialog[0]->ShowWindow(SW_HIDE);
-	pDialog[1]->ShowWindow(SW_SHOW);
+	pDialog[0]->ShowWindow(SW_SHOW);
+	pDialog[1]->ShowWindow(SW_HIDE);
 	//保存当前选择
 	m_CurSelTab = 0;
 
@@ -439,16 +438,4 @@ void CFSKDlg::Draw_graph_filter(float S[], float Fre[])
 		pDC1->MoveTo(oxf + StepX1 * i, oyf);
 		pDC1->LineTo(oxf + StepX1 * i, int(oyf - StepY1 * Fre[i]));
 	}
-}
-
-
-void CFSKDlg::OnBnClickedButtonLpfshow()
-{
-	// TODO: 在此添加控件通知处理程序代码
-		// TODO: 在此添加控件通知处理程序代码
-		Signal.Lpf();
-		Signal.Dft(Signal.GetHl(), N);
-		this->Draw_graph_filter(Signal.GetHl(), Signal.GetA());
-		//CFSKDlg* parent = (CFSKDlg*)GetParent()->GetParent();//CSensorSysDlg是主对话框对应的类
-		//parent->Draw_graph_filter(Signal.GetHl(), Signal.GetA());
 }

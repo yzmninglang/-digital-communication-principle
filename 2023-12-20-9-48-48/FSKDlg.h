@@ -51,6 +51,5 @@ public:
 	void Draw_graph(float S[], float Fre[]);
 	void Draw_graph_filter(float S[], float Fre[]);
 	float findmax(float x[], int m);
-	afx_msg void OnBnClickedButtonLpfshow();
 };
 #endif 

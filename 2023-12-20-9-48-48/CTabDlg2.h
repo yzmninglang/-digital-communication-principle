@@ -69,16 +69,4 @@ public:
 	afx_msg void OnBnClickedMfcbutton4();
 	afx_msg void OnBnClickedMfcbutton5();
 	afx_msg void OnBnClickedButtonLpfshow();
-	afx_msg void OnBnClickedButton1();
-	afx_msg void OnEnChangemyid2();
-	afx_msg void OnEnChangeEdit1();
-	afx_msg void OnEnChangemyid1();
-	afx_msg void OnEnChangeFs();
-	afx_msg void OnEnChangeFc1();
-	afx_msg void OnEnChangeSnr();
-	afx_msg void OnEnChangeLpf2();
-	afx_msg void OnEnChangeBpf1();
-	afx_msg void OnEnChangeBpf2();
-	afx_msg void OnCbnSelchangeDesign();
-	afx_msg void OnCbnSelchangeWinfunc();
 };
